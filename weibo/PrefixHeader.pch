@@ -12,4 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#import "UIView+Extension.h"
+
+#define WXLog(...) NSLog(@"%s \n %@ \n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
+
 #endif
