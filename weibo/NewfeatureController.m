@@ -112,6 +112,8 @@
 {
     WXLog(@"开始微博");
     
+    // 显示状态栏
+    [UIApplication sharedApplication].statusBarHidden = NO;
     self.view.window.rootViewController = [[MainController alloc] init];
 }
 

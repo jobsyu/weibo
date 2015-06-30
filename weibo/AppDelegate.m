@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NewfeatureController.h"
+#import "MainController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,23 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[NewfeatureController alloc] init];
+    NSString *key =(NSString *)kCFBundleVersionKey;
+    //获取info.plist文件的版本号
+    NSString *version = [NSBundle mainBundle].infoDictionary[key];
+    //从沙盒中取出上次存储的版本号
+    NSString *saveVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    
+    if ([saveVersion isEqualToString:version]) {
+        // 显示状态栏
+        application.statusBarHidden = NO;
+        
+        self.window.rootViewController = [[MainController alloc] init];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setObject:version forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        self.window.rootViewController =[[NewfeatureController alloc] init];
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

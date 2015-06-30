@@ -10,4 +10,13 @@
 
 @implementation MainController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
+    WXLog(@"viewdidLoad------%@", NSStringFromCGRect(self.view.frame));
+}
+
 @end
