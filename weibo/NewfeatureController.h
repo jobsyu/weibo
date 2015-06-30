@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewfeatureController.h
 //  weibo
 //
 //  Created by qianfeng on 15/6/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewfeatureController : UIViewController
 
 @end
-
