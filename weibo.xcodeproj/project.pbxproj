@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0207951B43D38600E52C79 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0207941B43D38600E52C79 /* UIImage+Extensions.m */; };
 		BC0DECDB1B42692500308096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DECDA1B42692500308096 /* main.m */; };
 		BC0DECDE1B42692500308096 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DECDD1B42692500308096 /* AppDelegate.m */; };
 		BC0DECE61B42692500308096 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0DECE51B42692500308096 /* Images.xcassets */; };
@@ -16,6 +17,8 @@
 		BC0DED0B1B42999800308096 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DED0A1B42999800308096 /* MainController.m */; };
 		BCF0DB5A1B4393D0006BDB17 /* UIBarButtonItem+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */; };
 		BCF0DB5D1B43BD20006BDB17 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */; };
+		BCF0DB5F1B43C5FA006BDB17 /* More.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF0DB5E1B43C5FA006BDB17 /* More.plist */; };
+		BCF0DB631B43CC50006BDB17 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF0DB621B43CC50006BDB17 /* GroupCell.m */; };
 		BCFDAA791B42B502007F4833 /* DockController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA781B42B502007F4833 /* DockController.m */; };
 		BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7B1B42B51F007F4833 /* DockItem.m */; };
 		BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7E1B42B53E007F4833 /* Dock.m */; };
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC0207931B43D38600E52C79 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		BC0207941B43D38600E52C79 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
 		BC0DECD51B42692500308096 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0DECD91B42692500308096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC0DECDA1B42692500308096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extensions.m"; sourceTree = "<group>"; };
 		BCF0DB5B1B43BD20006BDB17 /* WBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
 		BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
+		BCF0DB5E1B43C5FA006BDB17 /* More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = More.plist; sourceTree = "<group>"; };
+		BCF0DB611B43CC50006BDB17 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
+		BCF0DB621B43CC50006BDB17 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
 		BCFDAA771B42B502007F4833 /* DockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockController.h; sourceTree = "<group>"; };
 		BCFDAA781B42B502007F4833 /* DockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockController.m; sourceTree = "<group>"; };
 		BCFDAA7A1B42B51F007F4833 /* DockItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockItem.h; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BC0DECE51B42692500308096 /* Images.xcassets */,
+				BCF0DB5E1B43C5FA006BDB17 /* More.plist */,
 				BC0DECD91B42692500308096 /* Info.plist */,
 				BC0DECDA1B42692500308096 /* main.m */,
 				BC0DED021B426E5400308096 /* PrefixHeader.pch */,
@@ -178,6 +187,8 @@
 				BC0DED071B428B8100308096 /* UIView+Extension.m */,
 				BCF0DB581B4393D0006BDB17 /* UIBarButtonItem+Extensions.h */,
 				BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */,
+				BC0207931B43D38600E52C79 /* UIImage+Extensions.h */,
+				BC0207941B43D38600E52C79 /* UIImage+Extensions.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -200,6 +211,15 @@
 				BC0DED041B426F3500308096 /* NewfeatureController.m */,
 			);
 			name = Newfeature;
+			sourceTree = "<group>";
+		};
+		BCF0DB601B43CC2A006BDB17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCF0DB611B43CC50006BDB17 /* GroupCell.h */,
+				BCF0DB621B43CC50006BDB17 /* GroupCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		BCFDAA801B42B905007F4833 /* Me */ = {
@@ -232,6 +252,7 @@
 		BCFDAA831B42B923007F4833 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				BCF0DB601B43CC2A006BDB17 /* View */,
 				BCFDAA881B42B99B007F4833 /* MoreController.h */,
 				BCFDAA891B42B99B007F4833 /* MoreController.m */,
 			);
@@ -328,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0DECE61B42692500308096 /* Images.xcassets in Resources */,
+				BCF0DB5F1B43C5FA006BDB17 /* More.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,10 +370,12 @@
 				BCFDAA8A1B42B99B007F4833 /* MoreController.m in Sources */,
 				BC0DECDE1B42692500308096 /* AppDelegate.m in Sources */,
 				BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */,
+				BCF0DB631B43CC50006BDB17 /* GroupCell.m in Sources */,
 				BCF0DB5D1B43BD20006BDB17 /* WBNavigationController.m in Sources */,
 				BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */,
 				BC0DED051B426F3500308096 /* NewfeatureController.m in Sources */,
 				BC0DED081B428B8100308096 /* UIView+Extension.m in Sources */,
+				BC0207951B43D38600E52C79 /* UIImage+Extensions.m in Sources */,
 				BC0DED0B1B42999800308096 /* MainController.m in Sources */,
 				BCFDAA8D1B42B9B6007F4833 /* SquareController.m in Sources */,
 				BCF0DB5A1B4393D0006BDB17 /* UIBarButtonItem+Extensions.m in Sources */,

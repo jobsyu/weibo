@@ -31,8 +31,8 @@
     [barItem setBackgroundImage:[UIImage imageNamed:@"navigationbar_button_background_pushed"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
     NSMutableDictionary *dictbarItem = [NSMutableDictionary dictionary];
-    dict[NSForegroundColorAttributeName] = [UIColor blackColor];
-    //dict[NSShadowAttributeName] = [NSValue valueWithUIOffset:UIOffsetZero];
+    dict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
+    //dict[NSShadowAttributeName] = ;
     
     [barItem setTitleTextAttributes:dictbarItem forState:UIControlStateNormal];
     [barItem setTitleTextAttributes:dictbarItem forState:UIControlStateHighlighted];

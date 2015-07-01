@@ -14,6 +14,7 @@
 
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extensions.h"
+#import "UIImage+Extensions.h"
 
 #define WXLog(...) NSLog(@"%s \n %@ \n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
 
