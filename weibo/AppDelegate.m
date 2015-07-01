@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "NewfeatureController.h"
 #import "MainController.h"
+#import "AccountTool.h"
+#import "OauthController.h"
 
 @interface AppDelegate ()
 
@@ -30,8 +32,13 @@
     if ([saveVersion isEqualToString:version]) {
         // 显示状态栏
         application.statusBarHidden = NO;
+        if([AccountTool sharedAccountTool].account)
+        {
+            self.window.rootViewController = [[MainController alloc] init];
+        }else {
+            self.window.rootViewController = [[OauthController alloc] init];
+        }
         
-        self.window.rootViewController = [[MainController alloc] init];
     } else {
         [[NSUserDefaults standardUserDefaults] setObject:version forKey:key];
         [[NSUserDefaults standardUserDefaults] synchronize];
