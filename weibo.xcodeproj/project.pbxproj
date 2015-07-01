@@ -14,6 +14,16 @@
 		BC0DED051B426F3500308096 /* NewfeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DED041B426F3500308096 /* NewfeatureController.m */; };
 		BC0DED081B428B8100308096 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DED071B428B8100308096 /* UIView+Extension.m */; };
 		BC0DED0B1B42999800308096 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0DED0A1B42999800308096 /* MainController.m */; };
+		BCF0DB5A1B4393D0006BDB17 /* UIBarButtonItem+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */; };
+		BCF0DB5D1B43BD20006BDB17 /* WBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */; };
+		BCFDAA791B42B502007F4833 /* DockController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA781B42B502007F4833 /* DockController.m */; };
+		BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7B1B42B51F007F4833 /* DockItem.m */; };
+		BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7E1B42B53E007F4833 /* Dock.m */; };
+		BCFDAA871B42B982007F4833 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA861B42B982007F4833 /* HomeController.m */; };
+		BCFDAA8A1B42B99B007F4833 /* MoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA891B42B99B007F4833 /* MoreController.m */; };
+		BCFDAA8D1B42B9B6007F4833 /* SquareController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA8C1B42B9B6007F4833 /* SquareController.m */; };
+		BCFDAA901B42B9D1007F4833 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA8F1B42B9D1007F4833 /* MessageController.m */; };
+		BCFDAA931B42B9E5007F4833 /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA921B42B9E5007F4833 /* MeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,26 @@
 		BC0DED071B428B8100308096 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		BC0DED091B42999800308096 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		BC0DED0A1B42999800308096 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		BCF0DB581B4393D0006BDB17 /* UIBarButtonItem+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extensions.h"; sourceTree = "<group>"; };
+		BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extensions.m"; sourceTree = "<group>"; };
+		BCF0DB5B1B43BD20006BDB17 /* WBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNavigationController.h; sourceTree = "<group>"; };
+		BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNavigationController.m; sourceTree = "<group>"; };
+		BCFDAA771B42B502007F4833 /* DockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockController.h; sourceTree = "<group>"; };
+		BCFDAA781B42B502007F4833 /* DockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockController.m; sourceTree = "<group>"; };
+		BCFDAA7A1B42B51F007F4833 /* DockItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockItem.h; sourceTree = "<group>"; };
+		BCFDAA7B1B42B51F007F4833 /* DockItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockItem.m; sourceTree = "<group>"; };
+		BCFDAA7D1B42B53E007F4833 /* Dock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dock.h; sourceTree = "<group>"; };
+		BCFDAA7E1B42B53E007F4833 /* Dock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dock.m; sourceTree = "<group>"; };
+		BCFDAA851B42B982007F4833 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		BCFDAA861B42B982007F4833 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		BCFDAA881B42B99B007F4833 /* MoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreController.h; sourceTree = "<group>"; };
+		BCFDAA891B42B99B007F4833 /* MoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreController.m; sourceTree = "<group>"; };
+		BCFDAA8B1B42B9B6007F4833 /* SquareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareController.h; sourceTree = "<group>"; };
+		BCFDAA8C1B42B9B6007F4833 /* SquareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareController.m; sourceTree = "<group>"; };
+		BCFDAA8E1B42B9D1007F4833 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
+		BCFDAA8F1B42B9D1007F4833 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
+		BCFDAA911B42B9E5007F4833 /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
+		BCFDAA921B42B9E5007F4833 /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +114,15 @@
 		BC0DECD71B42692500308096 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				BCFDAA841B42B92C007F4833 /* Home */,
+				BCFDAA831B42B923007F4833 /* More */,
+				BCFDAA821B42B914007F4833 /* Square */,
+				BCFDAA811B42B90C007F4833 /* Message */,
+				BCFDAA801B42B905007F4833 /* Me */,
 				BC0DED011B426DF300308096 /* Newfeature */,
 				BC0DED001B426DEB00308096 /* Other */,
 				BC0DECFF1B426DBF00308096 /* Category */,
 				BC0DECFE1B426DAE00308096 /* Main */,
-				BC0DECDC1B42692500308096 /* AppDelegate.h */,
-				BC0DECDD1B42692500308096 /* AppDelegate.m */,
 				BC0DECD81B42692500308096 /* Supporting Files */,
 			);
 			path = weibo;
@@ -128,6 +161,12 @@
 			children = (
 				BC0DED091B42999800308096 /* MainController.h */,
 				BC0DED0A1B42999800308096 /* MainController.m */,
+				BCFDAA771B42B502007F4833 /* DockController.h */,
+				BCFDAA781B42B502007F4833 /* DockController.m */,
+				BCFDAA7A1B42B51F007F4833 /* DockItem.h */,
+				BCFDAA7B1B42B51F007F4833 /* DockItem.m */,
+				BCFDAA7D1B42B53E007F4833 /* Dock.h */,
+				BCFDAA7E1B42B53E007F4833 /* Dock.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -137,6 +176,8 @@
 			children = (
 				BC0DED061B428B8100308096 /* UIView+Extension.h */,
 				BC0DED071B428B8100308096 /* UIView+Extension.m */,
+				BCF0DB581B4393D0006BDB17 /* UIBarButtonItem+Extensions.h */,
+				BCF0DB591B4393D0006BDB17 /* UIBarButtonItem+Extensions.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -144,6 +185,10 @@
 		BC0DED001B426DEB00308096 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BC0DECDC1B42692500308096 /* AppDelegate.h */,
+				BC0DECDD1B42692500308096 /* AppDelegate.m */,
+				BCF0DB5B1B43BD20006BDB17 /* WBNavigationController.h */,
+				BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -155,6 +200,51 @@
 				BC0DED041B426F3500308096 /* NewfeatureController.m */,
 			);
 			name = Newfeature;
+			sourceTree = "<group>";
+		};
+		BCFDAA801B42B905007F4833 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				BCFDAA911B42B9E5007F4833 /* MeController.h */,
+				BCFDAA921B42B9E5007F4833 /* MeController.m */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		BCFDAA811B42B90C007F4833 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BCFDAA8E1B42B9D1007F4833 /* MessageController.h */,
+				BCFDAA8F1B42B9D1007F4833 /* MessageController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		BCFDAA821B42B914007F4833 /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				BCFDAA8B1B42B9B6007F4833 /* SquareController.h */,
+				BCFDAA8C1B42B9B6007F4833 /* SquareController.m */,
+			);
+			name = Square;
+			sourceTree = "<group>";
+		};
+		BCFDAA831B42B923007F4833 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				BCFDAA881B42B99B007F4833 /* MoreController.h */,
+				BCFDAA891B42B99B007F4833 /* MoreController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		BCFDAA841B42B92C007F4833 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BCFDAA851B42B982007F4833 /* HomeController.h */,
+				BCFDAA861B42B982007F4833 /* HomeController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,11 +345,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFDAA8A1B42B99B007F4833 /* MoreController.m in Sources */,
 				BC0DECDE1B42692500308096 /* AppDelegate.m in Sources */,
+				BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */,
+				BCF0DB5D1B43BD20006BDB17 /* WBNavigationController.m in Sources */,
+				BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */,
 				BC0DED051B426F3500308096 /* NewfeatureController.m in Sources */,
 				BC0DED081B428B8100308096 /* UIView+Extension.m in Sources */,
 				BC0DED0B1B42999800308096 /* MainController.m in Sources */,
+				BCFDAA8D1B42B9B6007F4833 /* SquareController.m in Sources */,
+				BCF0DB5A1B4393D0006BDB17 /* UIBarButtonItem+Extensions.m in Sources */,
+				BCFDAA791B42B502007F4833 /* DockController.m in Sources */,
+				BCFDAA871B42B982007F4833 /* HomeController.m in Sources */,
 				BC0DECDB1B42692500308096 /* main.m in Sources */,
+				BCFDAA931B42B9E5007F4833 /* MeController.m in Sources */,
+				BCFDAA901B42B9D1007F4833 /* MessageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
