@@ -22,6 +22,7 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor blackColor];
     //dict[NSShadowAttributeName] = [NSValue valueWithUIOffset:UIOffsetZero];
+    //dict[NSShadowAttributeName] = CGSizeMake(0, 0);
     
     [bar setTitleTextAttributes:dict];
     

@@ -10,6 +10,9 @@
 #import "Status.h"
 #import "StatusTool.h"
 #import "User.h"
+#import "StatusCellFrame.h"
+#import "UIImageView+WebCache.h"
+#import "StatusCell.h"
 
 @interface HomeController()
 @property (nonatomic,strong) NSMutableArray *statuses;
@@ -76,16 +79,25 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    StatusCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[StatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    Status *s = _statuses[indexPath.row];
-    cell.textLabel.text = s.text;
-    cell.detailTextLabel.text = s.user.screenName;
+    StatusCellFrame *f = [[StatusCellFrame alloc] init];
+    f.status = _statuses[indexPath.row];
+    cell.statusCellFrame = f;
+//    cell.textLabel.text = s.text;
+//    cell.detailTextLabel.text = s.user.screenName;
+    //cell.imageView.image
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StatusCellFrame *f = [[StatusCellFrame alloc] init];
+    f.status = _statuses[indexPath.row];
+    return  f.cellHeight;
 }
 @end

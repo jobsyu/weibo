@@ -14,6 +14,11 @@
 {
     if (self = [super init]) {
         self.screenName = dict[@"screen_name"];
+        self.profileImageUrl = dict[@"profile_image_url"];
+        self.verified = [dict[@"verified"] boolValue];
+        self.verified_type = [dict[@"verified_type"] intValue];
+        self.mbrank = [dict[@"mbrank"] intValue];
+        self.mbtype = [dict[@"mbtype"] intValue];
     }
     return self;
 }

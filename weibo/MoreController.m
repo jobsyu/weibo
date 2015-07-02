@@ -87,8 +87,8 @@
     
     //3.要在tableview底部添加一个按钮
     LogutBtn *logout = [LogutBtn buttonWithType:UIButtonTypeCustom];
-    [logout setImage:[UIImage imageNamed:@"common_button_big_red.png"] forState:UIControlStateNormal];
-    [logout setImage:[UIImage imageNamed:@"common_button_big_red_highlighted.png"] forState:UIControlStateHighlighted];
+    [logout setImage:[UIImage resizedImage:@"common_button_big_red.png"] forState:UIControlStateNormal];
+    [logout setImage:[UIImage resizedImage:@"common_button_big_red_highlighted.png"] forState:UIControlStateHighlighted];
     logout.bounds = CGRectMake(0, 0, 0, 44);
     
     //4.设置按钮文字
@@ -113,7 +113,7 @@
 #pragma mark 每当有一个新的cell进入屏幕视野范围内就会调用
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"cell";
+    static NSString *CellIdentifier = @"Cell";
     GroupCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[GroupCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

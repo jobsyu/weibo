@@ -45,7 +45,7 @@
     
     if (cellType == kCellTypeArrow) {
         if (_rightArrow == nil) {
-            _rightArrow = [[UIImageView alloc] init];
+            _rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_icon_arrow.png"]];
         }
         self.accessoryView = _rightArrow;
     } else if (cellType == kCellTypeLabel){
