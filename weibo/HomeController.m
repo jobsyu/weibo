@@ -15,7 +15,7 @@
 #import "StatusCell.h"
 
 @interface HomeController()
-@property (nonatomic,strong) NSMutableArray *statuses;
+@property (nonatomic,strong) NSMutableArray *statusFrame;
 
 @end
 
@@ -35,11 +35,16 @@
 #pragma mark 加载微博数据
 -(void)loadStatusData
 {
-    _statuses = [NSMutableArray array];
+    _statusFrame = [NSMutableArray array];
     
     //获取微博数据
     [StatusTool statusesWithSuccess:^(NSArray *statues) {
-        [_statuses addObjectsFromArray:statues];
+        
+        for (Status *s in statues) {
+            StatusCellFrame *f = [[StatusCellFrame alloc] init];
+            f.status =s;
+            [_statusFrame addObject:f];
+        }
         
         [self.tableView reloadData];
     } failure:nil];
@@ -73,7 +78,7 @@
 #pragma mark - Table view data source 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _statuses.count;
+    return _statusFrame.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,9 +89,8 @@
     if (cell == nil) {
         cell = [[StatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    StatusCellFrame *f = [[StatusCellFrame alloc] init];
-    f.status = _statuses[indexPath.row];
-    cell.statusCellFrame = f;
+    
+    cell.statusCellFrame = _statusFrame[indexPath.row];
 //    cell.textLabel.text = s.text;
 //    cell.detailTextLabel.text = s.user.screenName;
     //cell.imageView.image
@@ -96,8 +100,8 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    StatusCellFrame *f = [[StatusCellFrame alloc] init];
-    f.status = _statuses[indexPath.row];
+    StatusCellFrame *f = _statusFrame[indexPath.row];
+//    f.status = _statuses[indexPath.row];
     return  f.cellHeight;
 }
 @end

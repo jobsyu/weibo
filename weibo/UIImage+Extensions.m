@@ -18,8 +18,13 @@
 
 +(UIImage *)resizedImage:(NSString *)imgName
 {
+    return [self resizedImage:imgName xPos:0.5 yPos:0.5];
+}
+
++(UIImage *)resizedImage:(NSString *)imgName xPos:(CGFloat)xPos yPos:(CGFloat)yPos
+{
     UIImage *image = [UIImage imageNamed:imgName];
     
-    return [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height *0.5];
+    return [image stretchableImageWithLeftCapWidth:image.size.width * xPos topCapHeight:image.size.height * yPos];
 }
 @end

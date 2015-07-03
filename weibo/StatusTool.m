@@ -22,7 +22,7 @@
       
       NSMutableArray *statuses = [NSMutableArray array];
       
-      WXLog(@"%@",JSON);
+      //WXLog(@"%@",JSON);
       //解析json对象
       NSArray *array = JSON[@"statuses"];
       for(NSDictionary *dict in array){

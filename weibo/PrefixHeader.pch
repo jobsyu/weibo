@@ -19,6 +19,48 @@
 #import "webconfig.h"
 #import "NSString+Extensions.h"
 
+//1.设置cell的边框宽度
+#define kCellBorderWidth 10
+
+//2.cell内部子控件的字体设置
+#define kScreenNameFont [UIFont systemFontOfSize:17]
+#define kTimeFont  [UIFont systemFontOfSize:13]
+#define kSourceFont kTimeFont
+#define kTextFont  [UIFont systemFontOfSize:15]
+#define kRetweetedTextFont [UIFont systemFontOfSize:16]
+#define kRetweetedScreenNameFont [UIFont systemFontOfSize:16]
+
+//3.获得RGB颜色
+#define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+//4.cell内部子控件的颜色设置
+// 会员昵称颜色
+#define kMBScreenNameColor kColor(243, 101, 18)
+// 非会员昵称颜色
+#define kScreenNameColor kColor(93, 93, 93);
+// 被转发微博昵称颜色
+#define kRetweetedScreenNameColor kColor(63, 104, 161)
+
+//5.图片
+// 会员皇冠图标
+#define kMBIconW 14
+#define kMBIconH 14
+
+//头像
+#define kIconSmallW 34
+#define kIconSmallH 34
+
+#define kIconDefaultW 50
+#define kIconDefaultH 50
+
+#define kIconBigW 85
+#define kIconBigH 85
+
+//认证加V图标
+#define kVertifyW 18
+#define kVertifyH 18
+
+
 #define WXLog(...) NSLog(@"%s \n %@ \n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
 
 #endif

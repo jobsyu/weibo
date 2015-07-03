@@ -31,4 +31,55 @@
     }
     return self;
 }
+
+-(NSString *)createdat
+{
+    //WXLog(@"%@",self.createdat);
+    //1.将新浪时间字符串转化为NSDate对象
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"EEE MMM dd HH:mm:ss zzzz yyyy";
+    fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    NSDate *date = [fmt dateFromString:_createdat];
+    
+    //2.获得当前时间
+    NSDate *now = [NSDate date];
+    
+    //3.获得当前时间和微博发送时间的间隔（差多少秒）
+    NSTimeInterval interval = [now timeIntervalSinceDate:date];
+    //NSDate *date = [fmt ];
+    //4.根据时间间隔算出合理的字符串
+    if (interval < 60) { //1分钟
+        return @"刚刚";
+    } else if (interval < 60 *60 ){//1小时
+        return [NSString stringWithFormat:@"%.f分钟前",interval/60];
+    } else if (interval < 60 * 60 * 24){//1天内
+        return [NSString stringWithFormat:@"%.f小时前",interval/60/60];
+    } else {
+        fmt.dateFormat = @"MM-dd HH:mm";
+        return [fmt stringFromDate:date];
+    }
+}
+//
+//-(NSString *)source
+//{
+//    //<a href="http://weibo.com/" rel="nofollow">微博 weibo.com</a>
+//    WXLog(@"source%@",_source);
+//    int begin = [_source rangeOfString:@">"].location+1;
+//    int end = [_source rangeOfString:@"</"].location;
+//    
+//    
+//    return [NSString stringWithFormat:@"来自%@",[_source substringWithRange:NSMakeRange(begin,end-begin)]];
+//}
+
+
+-(void)setSource:(NSString *)source
+{
+    int begin = [source rangeOfString:@">"].location+1;
+    int end = [source rangeOfString:@"</"].location;
+    
+    if(end-begin < source.length){
+        _source = [NSString stringWithFormat:@"来自%@",[source substringWithRange:NSMakeRange(begin,end-begin)]];
+    }
+
+}
 @end
