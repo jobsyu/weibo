@@ -100,7 +100,7 @@
     }
     
     //11.整个cell的高度
-    _cellHeight = kCellBorderWidth;
+    _cellHeight = kCellBorderWidth + kCellMargin +kStatusDockHeight;
     if (status.picUrls.count) {
         _cellHeight += CGRectGetMaxY(_imageFrame);
     } else if (status.retweetedStatus){

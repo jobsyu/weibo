@@ -62,7 +62,8 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithIcon:@"navigationbar_pop" highlightedIcon:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
     
     //4.背景颜色
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kGlobalBg;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(void)pop

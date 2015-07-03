@@ -13,4 +13,6 @@
 -(CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
 
 -(CGSize)sizeWithFont:(UIFont *)font;
+
+-(NSString *)fileAppend:(NSString *)append;
 @end

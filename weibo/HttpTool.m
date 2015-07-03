@@ -9,6 +9,7 @@
 #import "HttpTool.h"
 #import "AFNetworking.h"
 #import "AccountTool.h"
+#import "UIImageView+WebCache.h"
 
 @implementation HttpTool
 
@@ -62,4 +63,9 @@
     }];
 }
 
+
++(void)downloadImage:(NSString *)url place:(UIImage *)place imageView:(UIImageView *)imageView
+{
+    [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:place options:SDWebImageLowPriority | SDWebImageRetryFailed];
+}
 @end

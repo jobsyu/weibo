@@ -21,6 +21,12 @@
 
 //1.设置cell的边框宽度
 #define kCellBorderWidth 10
+// 设置tableView的边框宽度
+#define kTableBorderWidth 8
+// 设置每个cell之间的间距
+#define kCellMargin 8
+// 设置微博dock的高度
+#define kStatusDockHeight 35
 
 //2.cell内部子控件的字体设置
 #define kScreenNameFont [UIFont systemFontOfSize:17]
@@ -32,6 +38,9 @@
 
 //3.获得RGB颜色
 #define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+// 全局的背景色
+#define kGlobalBg kColor(230, 230, 230)
 
 //4.cell内部子控件的颜色设置
 // 会员昵称颜色

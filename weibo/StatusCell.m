@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "IconView.h"
 #import "ImageListView.h"
+#import "StatusDock.h"
 
 @interface StatusCell()
 {
@@ -28,6 +29,8 @@
     UILabel *_retweetedScreenName; //被转发微博作者的昵称
     UILabel *_retweetedText; // 被转发微博的内容
     ImageListView *_retweetedImage; //被转发微博的配图
+    StatusDock *_statusDock; //底部的操作条
+    
 }
 @end
 
@@ -45,6 +48,16 @@
 }
 
 
+-(void)setFrame:(CGRect)frame
+{
+    frame.origin.x = kTableBorderWidth;
+    frame.origin.y += kTableBorderWidth;
+    frame.size.width -= kTableBorderWidth * 2;
+    frame.size.height -= kCellMargin;
+    
+    [super setFrame:frame];
+}
+
 -(void)addAllSubViews
 {
     //头像
@@ -54,6 +67,7 @@
     //昵称
     _screenName = [[UILabel alloc] init];
     _screenName.font = kScreenNameFont;  //17号字体
+    _screenName.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_screenName];
     
     //会员图标
@@ -63,23 +77,31 @@
     //时间
     _time = [[UILabel alloc] init];
     _time.font = kTimeFont;  //13号字体
+    _time.textColor = kColor(246, 165, 68);
+    _time.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_time];
     
     //来源
     _source = [[UILabel alloc] init];
     _source.font = kSourceFont; //13号字体
+    _source.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_source];
     
     //内容
     _text = [[UILabel alloc] init];
     _text.font = kTextFont; //15号字体
     _text.numberOfLines = 0; //换行
+    _text.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_text];
     
     //配图
     _image = [[ImageListView alloc] init];
     [self.contentView addSubview:_image];
     
+    //底部的操作条
+    CGFloat y = self.frame.size.height - kStatusDockHeight;
+    _statusDock = [[StatusDock alloc] initWithFrame:CGRectMake(0, y, 0, 0)];
+    [self.contentView addSubview:_statusDock];
 }
 
 
@@ -87,23 +109,28 @@
 {
     //被转发微博的父控件
     _retweeted = [[UIImageView alloc] init];
+    [_retweeted setImage:[UIImage resizedImage:@"timeline_retweet_background" xPos:0.9 yPos:0.5]];
     [self.contentView addSubview:_retweeted];
     
     //被转发微博作者的昵称
     _retweetedScreenName = [[UILabel alloc] init];
     _retweetedScreenName.font = kRetweetedScreenNameFont; //16号字体
+    _retweetedScreenName.textColor = kRetweetedScreenNameColor;
+    _retweetedScreenName.backgroundColor = [UIColor clearColor];
     [_retweeted addSubview:_retweetedScreenName];
     
     // 被转发微博的内容
     _retweetedText = [[UILabel alloc] init];
-    _retweetedScreenName.font = kRetweetedTextFont; //16号字体
-    _retweetedScreenName.numberOfLines = 0;
+    _retweetedText.numberOfLines = 0;
+    _retweetedText.font = kRetweetedTextFont;
+    _retweetedText.backgroundColor = [UIColor clearColor];
     [_retweeted addSubview:_retweetedText];
     
     //被转发微博的配图
     _retweetedImage = [[ImageListView alloc] init];
     [_retweeted addSubview:_retweetedImage];
 }
+
 
 -(void)setStatusCellFrame:(StatusCellFrame *)statusCellFrame
 {
@@ -130,12 +157,20 @@
     }
     
     //3. 时间
-    _time.frame = statusCellFrame.timeFrame;
     _time.text = status.createdat;
+    CGFloat _timeX = statusCellFrame.screenNameFrame.origin.x;
+    CGFloat _timeY = CGRectGetMaxY(statusCellFrame.screenNameFrame) + kCellBorderWidth;
+    CGSize _timeSize = [_time.text sizeWithFont:kTimeFont];
+    _time.frame = (CGRect){_timeX,_timeY,_timeSize};
+    
     
     //4. 来源
-    _source.frame = statusCellFrame.sourceFrame;
     _source.text= status.source;
+    CGFloat _sourceX = CGRectGetMaxX(_time.frame) +kCellBorderWidth;
+    CGFloat _sourceY = _timeY;
+    CGSize _sourceSize = [_source.text sizeWithFont:kTextFont];
+    _source.frame = (CGRect){_sourceX,_sourceY,_sourceSize};
+    
     
     //5. 内容
     _text.frame = statusCellFrame.textFrame;
@@ -158,21 +193,15 @@
         _retweeted.hidden = NO;
         //被转发微博的父控件
         _retweeted.frame = statusCellFrame.RetweetedFrame;
-        [_retweeted setImage:[UIImage resizedImage:@"timeline_retweet_background" xPos:0.9 yPos:0.5]];
+        
         
         //8.被转发微博作者的昵称
         _retweetedScreenName.frame =statusCellFrame.RetweetedScreenNameFrame;
-        _retweetedScreenName.font = kRetweetedScreenNameFont;
-        _retweetedScreenName.textColor = kRetweetedScreenNameColor;
-        _retweetedScreenName.backgroundColor = [UIColor clearColor];
         _retweetedScreenName.text = [NSString stringWithFormat:@"@%@",status.retweetedStatus.user.screenName];
         
         //9.被转发微博的内容
         _retweetedText.frame = statusCellFrame.RetweetedTextFrame;
-        _retweetedText.numberOfLines = 0;
-        _retweetedText.font = kRetweetedTextFont;
-        _retweetedText.backgroundColor = [UIColor clearColor];
-        _retweetedText.text = status.retweetedStatus.text;
+                _retweetedText.text = status.retweetedStatus.text;
         
         //10.被转发微博的配图
         if (status.retweetedStatus.picUrls.count) {

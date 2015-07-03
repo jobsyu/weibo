@@ -17,7 +17,7 @@
 #define kMargin 10
 
 #import "ImageListView.h"
-#import "UIImageView+WebCache.h"
+#import "ImageItemView.h"
 
 @interface ImageListView()
 
@@ -30,7 +30,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         for (int i = 0; i<kCount; i++) {
-            UIImageView *imageView = [[UIImageView alloc] init];
+            ImageItemView *imageView = [[ImageItemView alloc] init];
             [self addSubview:imageView];
         }
     }
@@ -45,7 +45,7 @@
     
     for (int i = 0; i<kCount; i++) {
         //1.取出对应位置的子控件
-        UIImageView *child = self.subviews[i];
+        ImageItemView *child = self.subviews[i];
         
         //2.不要显示图片
         if (i >= count) {
@@ -57,8 +57,9 @@
         child.hidden = NO;
         
         // 3.设置显示图片
-        NSURL *url = [NSURL URLWithString:imageUrls[i][@"thumbnail_pic"]];
-        [child sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Icon.png"] options: SDWebImageLowPriority | SDWebImageRetryFailed];
+        child.url = imageUrls[i][@"thumbnail_pic"];
+        //NSURL *url = [NSURL URLWithString:imageUrls[i][@"thumbnail_pic"]];
+//        [child sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Icon.png"] options: SDWebImageLowPriority | SDWebImageRetryFailed];
         
         // 4.设置frame
         if (count == 1) {//1张

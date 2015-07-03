@@ -39,6 +39,8 @@
 		BC9B08611B44D2B900C22F82 /* StatusCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B08601B44D2B900C22F82 /* StatusCellFrame.m */; };
 		BC9B08641B44E5DA00C22F82 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9B08631B44E5DA00C22F82 /* NSString+Extensions.m */; };
 		BC9C94F21B4635FB00847A5A /* ImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F11B4635FB00847A5A /* ImageListView.m */; };
+		BC9C94F51B4672C200847A5A /* ImageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F41B4672C200847A5A /* ImageItemView.m */; };
+		BC9C94F81B4679A300847A5A /* StatusDock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F71B4679A300847A5A /* StatusDock.m */; };
 		BCE2A8F81B4530B400F53E2A /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8D81B4530B400F53E2A /* MKAnnotationView+WebCache.m */; };
 		BCE2A8F91B4530B400F53E2A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8DA1B4530B400F53E2A /* NSData+ImageContentType.m */; };
 		BCE2A8FA1B4530B400F53E2A /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8DC1B4530B400F53E2A /* SDImageCache.m */; };
@@ -149,6 +151,10 @@
 		BC9B08631B44E5DA00C22F82 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
 		BC9C94F01B4635FB00847A5A /* ImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageListView.h; sourceTree = "<group>"; };
 		BC9C94F11B4635FB00847A5A /* ImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageListView.m; sourceTree = "<group>"; };
+		BC9C94F31B4672C200847A5A /* ImageItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageItemView.h; sourceTree = "<group>"; };
+		BC9C94F41B4672C200847A5A /* ImageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageItemView.m; sourceTree = "<group>"; };
+		BC9C94F61B4679A300847A5A /* StatusDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusDock.h; sourceTree = "<group>"; };
+		BC9C94F71B4679A300847A5A /* StatusDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusDock.m; sourceTree = "<group>"; };
 		BCE2A8D71B4530B400F53E2A /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		BCE2A8D81B4530B400F53E2A /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		BCE2A8D91B4530B400F53E2A /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -490,6 +496,10 @@
 				BCE2A9091B45407000F53E2A /* IconView.m */,
 				BC9C94F01B4635FB00847A5A /* ImageListView.h */,
 				BC9C94F11B4635FB00847A5A /* ImageListView.m */,
+				BC9C94F31B4672C200847A5A /* ImageItemView.h */,
+				BC9C94F41B4672C200847A5A /* ImageItemView.m */,
+				BC9C94F61B4679A300847A5A /* StatusDock.h */,
+				BC9C94F71B4679A300847A5A /* StatusDock.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -748,6 +758,8 @@
 				BC0207B21B43DF0000E52C79 /* AFNetworkReachabilityManager.m in Sources */,
 				BC9B08641B44E5DA00C22F82 /* NSString+Extensions.m in Sources */,
 				BCFDAA901B42B9D1007F4833 /* MessageController.m in Sources */,
+				BC9C94F51B4672C200847A5A /* ImageItemView.m in Sources */,
+				BC9C94F81B4679A300847A5A /* StatusDock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
