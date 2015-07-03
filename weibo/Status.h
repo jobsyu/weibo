@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class User;
 @interface Status : NSObject
+@property (nonatomic,assign) long long ID;
 @property (nonatomic,strong) User *user;//微博用户
 @property (nonatomic,strong) NSArray *picUrls; //微博配图
 @property (nonatomic,strong) Status *retweetedStatus;//被转发微博

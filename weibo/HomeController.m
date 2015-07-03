@@ -15,7 +15,7 @@
 #import "StatusCell.h"
 
 @interface HomeController()
-@property (nonatomic,strong) NSMutableArray *statusFrame;
+@property (nonatomic,strong) NSMutableArray *statusFrames;
 
 @end
 
@@ -30,22 +30,54 @@
     
     //2.获得用户的微博数据
     [self loadStatusData];
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:refresh];
+    [refresh addTarget:self action:@selector(startRefresh:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void)startRefresh:(UIRefreshControl *)refresh
+{
+    //1.第一条微博的ID
+    long long first = [[_statusFrames[0] status] ID];
+    
+    //2.获取微博数据
+    [StatusTool statusesWithSinceId:first maxId:0 success:^(NSArray *
+        statues) {
+        //1.在拿到最新微博数据的同时计算它的frame
+        NSMutableArray *newFrames =[NSMutableArray array];
+        for (Status *s in statues) {
+            StatusCellFrame *f = [[StatusCellFrame alloc] init];
+            f.status = s;
+            [newFrames addObject:f];
+        }
+        
+        //2.将newFrames整体插入到旧数据的前面
+        [_statusFrames insertObjects:newFrames atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, newFrames.count)]];
+        
+        //3.刷新表格
+        [self.tableView reloadData];
+        
+        //4.让刷新控件停止刷新状态
+        [refresh endRefreshing];
+    } failure:nil];
 }
 
 #pragma mark 加载微博数据
 -(void)loadStatusData
 {
-    _statusFrame = [NSMutableArray array];
+    _statusFrames = [NSMutableArray array];
     
     //获取微博数据
-    [StatusTool statusesWithSuccess:^(NSArray *statues) {
-        
+    [StatusTool statusesWithSinceId:0 maxId:0 success:^(NSArray *statues) {
+        // 1.在拿到最新微博数据的同时计算它的frame
         for (Status *s in statues) {
             StatusCellFrame *f = [[StatusCellFrame alloc] init];
             f.status =s;
-            [_statusFrame addObject:f];
+            [_statusFrames addObject:f];
         }
         
+        // 2.刷新表格
         [self.tableView reloadData];
     } failure:nil];
 }
@@ -79,7 +111,7 @@
 #pragma mark - Table view data source 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _statusFrame.count;
+    return _statusFrames.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,10 +120,10 @@
     StatusCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[StatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[StatusCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.statusCellFrame = _statusFrame[indexPath.row];
+    cell.statusCellFrame = _statusFrames[indexPath.row];
 //    cell.textLabel.text = s.text;
 //    cell.detailTextLabel.text = s.user.screenName;
     //cell.imageView.image
@@ -101,7 +133,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    StatusCellFrame *f = _statusFrame[indexPath.row];
+    StatusCellFrame *f = _statusFrames[indexPath.row];
 //    f.status = _statuses[indexPath.row];
     return  f.cellHeight;
 }

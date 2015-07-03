@@ -13,30 +13,34 @@
 
 @implementation StatusTool
 
-+(void)statusesWithSuccess:(StatusSuccessBlock)success failure:(StatusFailureBlock)failure
++(void)statusesWithSinceId:(long long)sinceId maxId:(long long)maxId success:(StatusSuccessBlock)success failure:(StatusFailureBlock)failure
 {
     
     NSString *strUrl = [NSString stringWithFormat:@"%@/2/statuses/home_timeline.json",kBaseURL];
-  [HttpTool getWithPath:strUrl params:nil success:^(id JSON) {
-      if(success == nil) return ;
+    [HttpTool getWithPath:strUrl params:@{
+         @"count" : @5,
+         @"since_id" : @(sinceId),
+         @"max_id" : @(maxId)
+      } success:^(id JSON) {
+        if (success == nil) return;
       
-      NSMutableArray *statuses = [NSMutableArray array];
+         NSMutableArray *statuses = [NSMutableArray array];
       
-      //WXLog(@"%@",JSON);
-      //解析json对象
-      NSArray *array = JSON[@"statuses"];
-      for(NSDictionary *dict in array){
-          Status *s = [[Status alloc] initWithDict:dict];
-          [statuses addObject:s];
-      }
+         //WXLog(@"%@",JSON);
+         //解析json对象
+         NSArray *array = JSON[@"statuses"];
+         for (NSDictionary *dict in array){
+            Status *s = [[Status alloc] initWithDict:dict];
+            [statuses addObject:s];
+         }
       
-      //回调block
-      success(statuses);
-  } failure:^(NSError *error) {
-      if(failure == nil) return ;
+         //回调block
+         success(statuses);
+      } failure:^(NSError *error) {
+         if(failure == nil) return;
       
-      failure(error);
-  }];
+         failure(error);
+      }];
 }
 
 @end

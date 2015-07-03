@@ -12,7 +12,6 @@ typedef void (^StatusSuccessBlock)(NSArray *statues);
 typedef void (^StatusFailureBlock)(NSError *error);
 
 @interface StatusTool : NSObject
-
-+(void)statusesWithSuccess:(StatusSuccessBlock)success failure:(StatusFailureBlock)failure;
++(void)statusesWithSinceId:(long long)sinceId maxId:(long long)maxId success:(StatusSuccessBlock)success failure:(StatusFailureBlock)failure;
 
 @end
