@@ -18,7 +18,7 @@
     
     NSString *strUrl = [NSString stringWithFormat:@"%@/2/statuses/home_timeline.json",kBaseURL];
     [HttpTool getWithPath:strUrl params:@{
-         @"count" : @5,
+         @"count" : @20,
          @"since_id" : @(sinceId),
          @"max_id" : @(maxId)
       } success:^(id JSON) {

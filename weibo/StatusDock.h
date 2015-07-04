@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Status;
 
 @interface StatusDock : UIImageView
-
+@property (nonatomic,strong) Status *status;
 @end

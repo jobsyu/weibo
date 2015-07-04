@@ -7,6 +7,15 @@
 //
 
 #import "StatusDock.h"
+#import "Status.h"
+
+@interface StatusDock()
+{
+    UIButton *_repost;
+    UIButton *_comment;
+    UIButton *_attitude;
+}
+@end
 
 @implementation StatusDock
 
@@ -14,21 +23,22 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.userInteractionEnabled = YES;
         self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         
         // 0.设置整个dock的背景
         self.image = [UIImage resizedImage:@"timeline_card_bottom.png"];
         
         // 1.添加3个按钮
-        [self addBtn:@"转发" icon:@"timeline_icon_retweet.png" bg:@"timeline_card_leftbottom.png" index:0];
-        [self addBtn:@"评论" icon:@"timeline_icon_comment.png" bg:@"timeline_card_middlebottom.png" index:1];
-        [self addBtn:@"赞" icon:@"timeline_icon_unlike.png" bg:@"timeline_card_rightbottom.png" index:2];
+       _repost = [self addBtn:@"转发" icon:@"timeline_icon_retweet.png" bg:@"timeline_card_leftbottom.png" index:0];
+       _comment = [self addBtn:@"评论" icon:@"timeline_icon_comment.png" bg:@"timeline_card_middlebottom.png" index:1];
+       _attitude =[self addBtn:@"赞" icon:@"timeline_icon_unlike.png" bg:@"timeline_card_rightbottom.png" index:2];
         
     }
     return self;
 }
 
--(void)addBtn:(NSString *)title icon:(NSString *)icon bg:(NSString *)bg index:(int)index
+-(UIButton *)addBtn:(NSString *)title icon:(NSString *)icon bg:(NSString *)bg index:(int)index
 {
     //设置标题
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -57,6 +67,8 @@
         divider.center =  CGPointMake(btn.frame.origin.x, kStatusDockHeight * 0.5);
         [self addSubview:divider];
     }
+    
+    return btn;
 }
 
 #pragma mark 在内部固定自己的宽高
@@ -67,5 +79,37 @@
     
     [super setFrame:frame];
 }
+
+#pragma mark 给操作条赋值
+-(void)setStatus:(Status *)status
+{
+    _status = status;
+    
+    //1.转发
+    [self setBtn:_repost title:@"转发" count:status.repostsCount];
+    //2.评论
+    [self setBtn:_comment title:@"评论" count:status.commentsCount];
+    //3.赞
+    [self setBtn:_attitude title:@"赞" count:status.attitudesCount];
+}
+
+#pragma mark 设置按钮文字
+-(void)setBtn:(UIButton *)btn title:(NSString *)title count:(int)count
+{
+    if (count >= 10000) {//上万
+        CGFloat final = count / 10000.0;
+        NSString *title = [NSString stringWithFormat:@"%.1f万",final];
+        
+        //替换.0为空串
+        title = [title stringByReplacingOccurrencesOfString:@".0" withString:@""];
+        [btn setTitle:title forState:UIControlStateNormal];
+    } else if (count > 0){//小于一万
+        NSString *title = [NSString stringWithFormat:@"%d",count];
+        [btn setTitle:title forState:UIControlStateNormal];
+    } else { //没有
+        [btn setTitle:title forState:UIControlStateNormal];
+    }
+}
+
 
 @end

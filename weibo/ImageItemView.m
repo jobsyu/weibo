@@ -34,7 +34,6 @@
     [HttpTool downloadImage:url place:[UIImage imageNamed:@"timeline_image_loading"] imageView:self];
     
     _gifView.hidden = ![url.lowercaseString hasSuffix:@"gif"];
-    
 }
 
 -(void)setFrame:(CGRect)frame

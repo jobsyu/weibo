@@ -43,10 +43,21 @@
         [self addAllSubViews];
         //添加转发所有子控件
         [self addReweetedViews];
+        //设置背景
+        [self setBg];
+        
     }
     return self;
 }
 
+#pragma mark 设置背景
+-(void)setBg
+{
+    //默认背景
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage resizedImage:@"common_card_background"]];
+    //长按背景
+    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage resizedImage:@"common_card_background_highlighted"]];
+}
 
 -(void)setFrame:(CGRect)frame
 {
@@ -138,6 +149,8 @@
     
     Status *status =statusCellFrame.status;
     
+    //0.底部的操作条
+    _statusDock.status = status;
     //1. 头像
     _icon.frame = statusCellFrame.iconFrame;
     [_icon setUser:status.user type:kIconTypeSmall];
