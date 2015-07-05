@@ -26,15 +26,17 @@
 // 设置每个cell之间的间距
 #define kCellMargin 8
 // 设置微博dock的高度
-#define kStatusDockHeight 35
+#define kStatusDockHeight 30
+//设置转发微博dock的高度
+#define kRetweetedDockHeight 35
 
 //2.cell内部子控件的字体设置
-#define kScreenNameFont [UIFont systemFontOfSize:17]
-#define kTimeFont  [UIFont systemFontOfSize:13]
+#define kScreenNameFont [UIFont systemFontOfSize:13]
+#define kTimeFont  [UIFont systemFontOfSize:11]
 #define kSourceFont kTimeFont
-#define kTextFont  [UIFont systemFontOfSize:15]
-#define kRetweetedTextFont [UIFont systemFontOfSize:16]
-#define kRetweetedScreenNameFont [UIFont systemFontOfSize:16]
+#define kTextFont  [UIFont systemFontOfSize:13]
+#define kRetweetedTextFont [UIFont systemFontOfSize:13]
+#define kRetweetedScreenNameFont [UIFont systemFontOfSize:13]
 
 
 //3.获得RGB颜色
@@ -74,5 +76,9 @@
 
 
 #define WXLog(...) NSLog(@"%s \n %@ \n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
+
+// 8.取出滚动条
+#pragma mark 重写这个方法的目的。去掉父类默认的操作：显示滚动条
+#define kHideScroll - (void)viewDidAppear:(BOOL)animated { }
 
 #endif

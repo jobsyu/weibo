@@ -6,10 +6,9 @@
 //  Copyright (c) 2015年 ycp. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseStatusCell.h"
 @class StatusCellFrame;
 
-@interface StatusCell : UITableViewCell
-
+@interface StatusCell : BaseStatusCell
 @property (nonatomic,strong) StatusCellFrame *statusCellFrame;
 @end

@@ -50,6 +50,11 @@
     
 }
 
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     if (section  == _data.count -1) {

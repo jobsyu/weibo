@@ -54,6 +54,9 @@
         [self.delegate dock:self itemSelectedFrom:_selectedDockItem.tag to:dockItemTo.tag];
     }
     
+    //
+    _selectedIndex = _selectedDockItem.tag;
+    
     // 1.取消选中当前选中的item
     _selectedDockItem.selected =NO;
     

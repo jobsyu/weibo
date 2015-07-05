@@ -44,6 +44,8 @@
     UIViewController *newVc = self.childViewControllers[to];
     newVc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - kDockHeight);
     [self.view addSubview:newVc.view];
+    
+    _selectedController = newVc;
 }
 
 @end

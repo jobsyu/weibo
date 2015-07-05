@@ -16,6 +16,7 @@
 #import "UIImageView+WebCache.h"
 #import "StatusCell.h"
 #import "MJRefresh.h"
+#import "StatusDetailController.h"
 
 @interface HomeController()
 @property (nonatomic,strong) NSMutableArray *statusFrames;
@@ -151,7 +152,7 @@
     [self.navigationController.view insertSubview:btn belowSubview:self.navigationController.navigationBar];
     
     //2.开始执行动画
-    CGFloat duration = 2;
+    CGFloat duration = 0.5;
     
     [UIView animateWithDuration:duration animations:^{
         btn.transform = CGAffineTransformMakeTranslation(0, h);
@@ -205,7 +206,7 @@
         cell = [[StatusCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.statusCellFrame = _statusFrames[indexPath.row];
+    cell.cellFrame = _statusFrames[indexPath.row];
 //    cell.textLabel.text = s.text;
 //    cell.detailTextLabel.text = s.user.screenName;
     //cell.imageView.image
@@ -213,10 +214,20 @@
     return cell;
 }
 
+#pragma mark 返回行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     StatusCellFrame *f = _statusFrames[indexPath.row];
 //    f.status = _statuses[indexPath.row];
     return  f.cellHeight;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StatusDetailController *detail = [[StatusDetailController alloc] init];
+    StatusCellFrame *f = _statusFrames[indexPath.row];
+    detail.status = f.status;
+    
+    [self.navigationController pushViewController:detail animated:YES];
 }
 @end

@@ -47,9 +47,9 @@
     //设置图标
     [btn setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
     //设置普通背景
-    [btn setBackgroundImage:[UIImage imageNamed:bg] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage resizedImage:bg] forState:UIControlStateNormal];
     //设置高亮背景
-    [btn setBackgroundImage:[UIImage imageNamed:[bg fileAppend:@"highlighted"]] forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:[UIImage resizedImage:[bg fileAppend:@"highlighted"]] forState:UIControlStateHighlighted];
     //文字颜色
     [btn setTitleColor:kColor(188, 188, 188) forState:UIControlStateNormal];
     //字体大小

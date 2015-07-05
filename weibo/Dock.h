@@ -22,4 +22,6 @@
 -(void)setDockframe;
 
 @property (nonatomic,weak) id<DockDelegate> delegate;
+
+@property (nonatomic,assign) int selectedIndex;
 @end
