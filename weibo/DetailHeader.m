@@ -19,7 +19,8 @@
 
 -(void)awakeFromNib
 {
-    [self btnClick:_comment];
+    self.backgroundColor = kGlobalBg;
+    //[self btnClick:_comment];
 }
 
 + (id)header
@@ -40,6 +41,14 @@
         center.x = sender.center.x;
         _hint.center =center;
     }];
+    
+    DetailHeaderBtnType type = (sender== _repost)?kDetailHeaderBtnTypeRepost:kDetailHeaderBtnTypeComment;
+    _currentBtnType = type;
+    
+    //通知代理
+    if ([_delegate respondsToSelector:@selector(detailHeader:btnClick:)]) {
+        [_delegate detailHeader:self btnClick:type];
+    }
 }
 
 -(void)setStatus:(Status *)status
@@ -62,6 +71,5 @@
     } else {//一万一下
         [btn setTitle:[NSString stringWithFormat:@"%d %@",count,title] forState:UIControlStateNormal];
     }
-    
 }
 @end

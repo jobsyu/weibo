@@ -7,6 +7,8 @@
 //
 
 #import "MeController.h"
+#import "AccountTool.h"
+#import "FriendshipTool.h"
 
 @implementation MeController
 
@@ -16,7 +18,14 @@
     // 1.设置标题
     self.title = @"我";
     // 2.背景颜色
-    self.view.backgroundColor = [UIColor blueColor];
+    //self.view.backgroundColor = [UIColor blueColor];
+    //
+    long long ID = [[AccountTool sharedAccountTool].account.uid longLongValue];
+    [FriendshipTool friendsWithId:ID success:^(NSArray *followers) {
+        [_data addObjectsFromArray:followers];
+        
+        [self.tableView reloadData];
+    } failure:nil];
 }
 
 @end

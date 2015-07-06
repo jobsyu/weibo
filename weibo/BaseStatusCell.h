@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BaseStatusCellFrame;
+#import "BaseWordCell.h"
 
-@interface BaseStatusCell : UITableViewCell
+@class BaseStatusCellFrame;
+@interface BaseStatusCell : BaseWordCell
 {
     UIImageView *_retweeted;//被转发微博的父控件
 }

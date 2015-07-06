@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
 typedef enum {
     kVerifiedTypeNone = -1, //没有认证
@@ -23,7 +24,7 @@ typedef enum {
     kMBTypeYear      //年费
 } MBType;
 
-@interface User : NSObject
+@interface User : BaseModel
 @property (nonatomic,copy) NSString *screenName; //昵称
 @property (nonatomic,copy) NSString *profileImageUrl; //头像
 
@@ -32,7 +33,4 @@ typedef enum {
 
 @property (nonatomic,assign) int mbrank; //会员等级
 @property (nonatomic,assign) MBType mbtype; //会员类型
-
-
--(id)initWithDict:(NSDictionary *)dict;
 @end

@@ -16,12 +16,7 @@
 
 @interface BaseStatusCell()
 {
-    IconView *_icon; //头像
-    UILabel *_screenName; //昵称
-    UIImageView *_mbIcon; //会员图标
-    UILabel *_time; //时间
     UILabel *_source; //来源
-    UILabel *_text; //内容
     ImageListView *_image; //配图
     
     UILabel *_retweetedScreenName; //被转发微博作者的昵称
@@ -46,12 +41,13 @@
 }
 
 #pragma mark 设置背景
--(void)setBg
+- (void)setBg
 {
-    //默认背景
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage resizedImage:@"common_card_background"]];
-    //长按背景
-    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage resizedImage:@"common_card_background_highlighted"]];
+    // 1.默认背景
+    _bg.image = [UIImage resizedImage:@"common_card_background.png"];
+    
+    // 2.长按背景
+    _selectedBg.image = [UIImage resizedImage:@"common_card_background_highlighted.png"];
 }
 
 -(void)setFrame:(CGRect)frame
@@ -67,39 +63,11 @@
 #pragma mark 添加微博本身所有子控件
 -(void)addAllSubViews
 {
-    //头像
-    _icon = [[IconView alloc] init];
-    [self.contentView addSubview:_icon];
-    
-    //昵称
-    _screenName = [[UILabel alloc] init];
-    _screenName.font = kScreenNameFont;  //17号字体
-    _screenName.backgroundColor = [UIColor clearColor];
-    [self.contentView addSubview:_screenName];
-    
-    //会员图标
-    _mbIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_icon_membership.png"]];
-    [self.contentView addSubview:_mbIcon];
-    
-    //时间
-    _time = [[UILabel alloc] init];
-    _time.font = kTimeFont;  //13号字体
-    _time.textColor = kColor(246, 165, 68);
-    _time.backgroundColor = [UIColor clearColor];
-    [self.contentView addSubview:_time];
-    
     //来源
     _source = [[UILabel alloc] init];
     _source.font = kSourceFont; //13号字体
     _source.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_source];
-    
-    //内容
-    _text = [[UILabel alloc] init];
-    _text.font = kTextFont; //15号字体
-    _text.numberOfLines = 0; //换行
-    _text.backgroundColor = [UIColor clearColor];
-    [self.contentView addSubview:_text];
     
     //配图
     _image = [[ImageListView alloc] init];
@@ -162,7 +130,7 @@
     }
     
     //3. 时间
-    _time.text = status.createdat;
+    _time.text = status.createdAt;
     CGFloat _timeX = cellFrame.screenNameFrame.origin.x;
     CGFloat _timeY = CGRectGetMaxY(cellFrame.screenNameFrame) + kCellBorderWidth;
     CGSize _timeSize = [_time.text sizeWithFont:kTimeFont];

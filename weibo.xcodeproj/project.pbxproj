@@ -41,6 +41,8 @@
 		BC9C94F21B4635FB00847A5A /* ImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F11B4635FB00847A5A /* ImageListView.m */; };
 		BC9C94F51B4672C200847A5A /* ImageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F41B4672C200847A5A /* ImageItemView.m */; };
 		BC9C94F81B4679A300847A5A /* StatusDock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C94F71B4679A300847A5A /* StatusDock.m */; };
+		BCD811FB1B4A998B008AB696 /* FriendshipTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD811FA1B4A998B008AB696 /* FriendshipTool.m */; };
+		BCD811FE1B4A9D66008AB696 /* FriendshipController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD811FD1B4A9D66008AB696 /* FriendshipController.m */; };
 		BCE2A8F81B4530B400F53E2A /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8D81B4530B400F53E2A /* MKAnnotationView+WebCache.m */; };
 		BCE2A8F91B4530B400F53E2A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8DA1B4530B400F53E2A /* NSData+ImageContentType.m */; };
 		BCE2A8FA1B4530B400F53E2A /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE2A8DC1B4530B400F53E2A /* SDImageCache.m */; };
@@ -89,6 +91,17 @@
 		BCFB113F1B48FF64002B0005 /* RetweetedDock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB113E1B48FF63002B0005 /* RetweetedDock.m */; };
 		BCFB11421B4911D0002B0005 /* DetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11411B4911D0002B0005 /* DetailHeader.m */; };
 		BCFB11441B4911E2002B0005 /* DetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFB11431B4911E2002B0005 /* DetailHeader.xib */; };
+		BCFB11481B4925E4002B0005 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11471B4925E4002B0005 /* BaseCell.m */; };
+		BCFB114B1B492763002B0005 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB114A1B492763002B0005 /* BaseModel.m */; };
+		BCFB114E1B4928CB002B0005 /* BaseText.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB114D1B4928CB002B0005 /* BaseText.m */; };
+		BCFB11511B4929E0002B0005 /* BaseWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11501B4929E0002B0005 /* BaseWordCell.m */; };
+		BCFB11541B492BED002B0005 /* BaseTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11531B492BED002B0005 /* BaseTextCell.m */; };
+		BCFB11571B492C33002B0005 /* BaseTextCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11561B492C33002B0005 /* BaseTextCellFrame.m */; };
+		BCFB115D1B49383C002B0005 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB115C1B49383C002B0005 /* Comment.m */; };
+		BCFB11601B493AC8002B0005 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB115F1B493AC8002B0005 /* CommentCell.m */; };
+		BCFB11631B493AE4002B0005 /* RepostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11621B493AE4002B0005 /* RepostCell.m */; };
+		BCFB11661B493B5D002B0005 /* CommentCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11651B493B5D002B0005 /* CommentCellFrame.m */; };
+		BCFB11691B493B7A002B0005 /* RepostCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB11681B493B7A002B0005 /* RepostCellFrame.m */; };
 		BCFDAA791B42B502007F4833 /* DockController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA781B42B502007F4833 /* DockController.m */; };
 		BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7B1B42B51F007F4833 /* DockItem.m */; };
 		BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDAA7E1B42B53E007F4833 /* Dock.m */; };
@@ -182,6 +195,10 @@
 		BC9C94F41B4672C200847A5A /* ImageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageItemView.m; sourceTree = "<group>"; };
 		BC9C94F61B4679A300847A5A /* StatusDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusDock.h; sourceTree = "<group>"; };
 		BC9C94F71B4679A300847A5A /* StatusDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusDock.m; sourceTree = "<group>"; };
+		BCD811F91B4A998B008AB696 /* FriendshipTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendshipTool.h; sourceTree = "<group>"; };
+		BCD811FA1B4A998B008AB696 /* FriendshipTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendshipTool.m; sourceTree = "<group>"; };
+		BCD811FC1B4A9D66008AB696 /* FriendshipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendshipController.h; sourceTree = "<group>"; };
+		BCD811FD1B4A9D66008AB696 /* FriendshipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendshipController.m; sourceTree = "<group>"; };
 		BCE2A8D71B4530B400F53E2A /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		BCE2A8D81B4530B400F53E2A /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		BCE2A8D91B4530B400F53E2A /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -277,6 +294,28 @@
 		BCFB11401B4911D0002B0005 /* DetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailHeader.h; sourceTree = "<group>"; };
 		BCFB11411B4911D0002B0005 /* DetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailHeader.m; sourceTree = "<group>"; };
 		BCFB11431B4911E2002B0005 /* DetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeader.xib; sourceTree = "<group>"; };
+		BCFB11461B4925E4002B0005 /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		BCFB11471B4925E4002B0005 /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		BCFB11491B492763002B0005 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		BCFB114A1B492763002B0005 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		BCFB114C1B4928CB002B0005 /* BaseText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseText.h; sourceTree = "<group>"; };
+		BCFB114D1B4928CB002B0005 /* BaseText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseText.m; sourceTree = "<group>"; };
+		BCFB114F1B4929E0002B0005 /* BaseWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWordCell.h; sourceTree = "<group>"; };
+		BCFB11501B4929E0002B0005 /* BaseWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWordCell.m; sourceTree = "<group>"; };
+		BCFB11521B492BED002B0005 /* BaseTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextCell.h; sourceTree = "<group>"; };
+		BCFB11531B492BED002B0005 /* BaseTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextCell.m; sourceTree = "<group>"; };
+		BCFB11551B492C33002B0005 /* BaseTextCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextCellFrame.h; sourceTree = "<group>"; };
+		BCFB11561B492C33002B0005 /* BaseTextCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextCellFrame.m; sourceTree = "<group>"; };
+		BCFB115B1B49383C002B0005 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		BCFB115C1B49383C002B0005 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		BCFB115E1B493AC8002B0005 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		BCFB115F1B493AC8002B0005 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		BCFB11611B493AE4002B0005 /* RepostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepostCell.h; sourceTree = "<group>"; };
+		BCFB11621B493AE4002B0005 /* RepostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepostCell.m; sourceTree = "<group>"; };
+		BCFB11641B493B5D002B0005 /* CommentCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCellFrame.h; sourceTree = "<group>"; };
+		BCFB11651B493B5D002B0005 /* CommentCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCellFrame.m; sourceTree = "<group>"; };
+		BCFB11671B493B7A002B0005 /* RepostCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepostCellFrame.h; sourceTree = "<group>"; };
+		BCFB11681B493B7A002B0005 /* RepostCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepostCellFrame.m; sourceTree = "<group>"; };
 		BCFDAA771B42B502007F4833 /* DockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockController.h; sourceTree = "<group>"; };
 		BCFDAA781B42B502007F4833 /* DockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockController.m; sourceTree = "<group>"; };
 		BCFDAA7A1B42B51F007F4833 /* DockItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockItem.h; sourceTree = "<group>"; };
@@ -573,6 +612,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		BCD811F81B4A9966008AB696 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				BCD811F91B4A998B008AB696 /* FriendshipTool.h */,
+				BCD811FA1B4A998B008AB696 /* FriendshipTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		BCE2A8D61B4530B400F53E2A /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,17 +757,9 @@
 		BCECE9B11B47C7DA0071FD81 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				BCECE9B21B47C8080071FD81 /* StatusDetailController.h */,
-				BCECE9B31B47C8080071FD81 /* StatusDetailController.m */,
-				BCFB11371B48F5C2002B0005 /* StatusDetailCell.h */,
-				BCFB11381B48F5C2002B0005 /* StatusDetailCell.m */,
-				BCFB113A1B48FD7A002B0005 /* StatusDetailCellFrame.h */,
-				BCFB113B1B48FD7A002B0005 /* StatusDetailCellFrame.m */,
-				BCFB113D1B48FF63002B0005 /* RetweetedDock.h */,
-				BCFB113E1B48FF63002B0005 /* RetweetedDock.m */,
-				BCFB11401B4911D0002B0005 /* DetailHeader.h */,
-				BCFB11411B4911D0002B0005 /* DetailHeader.m */,
-				BCFB11431B4911E2002B0005 /* DetailHeader.xib */,
+				BCFB115A1B4937B3002B0005 /* Controller */,
+				BCFB11591B4937A9002B0005 /* Model */,
+				BCFB11581B4937A1002B0005 /* View */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -727,14 +767,13 @@
 		BCECE9B51B47E1930071FD81 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BCFB11451B4925AB002B0005 /* Base */,
 				BC0DECDC1B42692500308096 /* AppDelegate.h */,
 				BC0DECDD1B42692500308096 /* AppDelegate.m */,
 				BCF0DB5B1B43BD20006BDB17 /* WBNavigationController.h */,
 				BCF0DB5C1B43BD20006BDB17 /* WBNavigationController.m */,
 				BC0207961B43DEDB00E52C79 /* Lib */,
 				BC0207D01B43E6DB00E52C79 /* Tool */,
-				BCECE9BA1B47E2530071FD81 /* Model */,
-				BCECE9B61B47E19A0071FD81 /* View */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -744,6 +783,12 @@
 			children = (
 				BCECE9B71B47E1BC0071FD81 /* BaseStatusCell.h */,
 				BCECE9B81B47E1BC0071FD81 /* BaseStatusCell.m */,
+				BCFB11461B4925E4002B0005 /* BaseCell.h */,
+				BCFB11471B4925E4002B0005 /* BaseCell.m */,
+				BCFB114F1B4929E0002B0005 /* BaseWordCell.h */,
+				BCFB11501B4929E0002B0005 /* BaseWordCell.m */,
+				BCFB11521B492BED002B0005 /* BaseTextCell.h */,
+				BCFB11531B492BED002B0005 /* BaseTextCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -753,6 +798,12 @@
 			children = (
 				BCECE9BB1B47E2810071FD81 /* BaseStatusCellFrame.h */,
 				BCECE9BC1B47E2810071FD81 /* BaseStatusCellFrame.m */,
+				BCFB11491B492763002B0005 /* BaseModel.h */,
+				BCFB114A1B492763002B0005 /* BaseModel.m */,
+				BCFB114C1B4928CB002B0005 /* BaseText.h */,
+				BCFB114D1B4928CB002B0005 /* BaseText.m */,
+				BCFB11551B492C33002B0005 /* BaseTextCellFrame.h */,
+				BCFB11561B492C33002B0005 /* BaseTextCellFrame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -766,11 +817,64 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		BCFB11451B4925AB002B0005 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BCECE9BA1B47E2530071FD81 /* Model */,
+				BCECE9B61B47E19A0071FD81 /* View */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		BCFB11581B4937A1002B0005 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCFB11401B4911D0002B0005 /* DetailHeader.h */,
+				BCFB11411B4911D0002B0005 /* DetailHeader.m */,
+				BCFB11431B4911E2002B0005 /* DetailHeader.xib */,
+				BCFB113D1B48FF63002B0005 /* RetweetedDock.h */,
+				BCFB113E1B48FF63002B0005 /* RetweetedDock.m */,
+				BCFB11371B48F5C2002B0005 /* StatusDetailCell.h */,
+				BCFB11381B48F5C2002B0005 /* StatusDetailCell.m */,
+				BCFB115E1B493AC8002B0005 /* CommentCell.h */,
+				BCFB115F1B493AC8002B0005 /* CommentCell.m */,
+				BCFB11611B493AE4002B0005 /* RepostCell.h */,
+				BCFB11621B493AE4002B0005 /* RepostCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BCFB11591B4937A9002B0005 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCFB113A1B48FD7A002B0005 /* StatusDetailCellFrame.h */,
+				BCFB113B1B48FD7A002B0005 /* StatusDetailCellFrame.m */,
+				BCFB115B1B49383C002B0005 /* Comment.h */,
+				BCFB115C1B49383C002B0005 /* Comment.m */,
+				BCFB11641B493B5D002B0005 /* CommentCellFrame.h */,
+				BCFB11651B493B5D002B0005 /* CommentCellFrame.m */,
+				BCFB11671B493B7A002B0005 /* RepostCellFrame.h */,
+				BCFB11681B493B7A002B0005 /* RepostCellFrame.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BCFB115A1B4937B3002B0005 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCECE9B21B47C8080071FD81 /* StatusDetailController.h */,
+				BCECE9B31B47C8080071FD81 /* StatusDetailController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		BCFDAA801B42B905007F4833 /* Me */ = {
 			isa = PBXGroup;
 			children = (
 				BCFDAA911B42B9E5007F4833 /* MeController.h */,
 				BCFDAA921B42B9E5007F4833 /* MeController.m */,
+				BCD811FC1B4A9D66008AB696 /* FriendshipController.h */,
+				BCD811FD1B4A9D66008AB696 /* FriendshipController.m */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -778,6 +882,7 @@
 		BCFDAA811B42B90C007F4833 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				BCD811F81B4A9966008AB696 /* Tool */,
 				BCFDAA8E1B42B9D1007F4833 /* MessageController.h */,
 				BCFDAA8F1B42B9D1007F4833 /* MessageController.m */,
 			);
@@ -929,16 +1034,21 @@
 				BCECE9B41B47C8080071FD81 /* StatusDetailController.m in Sources */,
 				BC0207BE1B43E03500E52C79 /* MBProgressHUD+MJ.m in Sources */,
 				BC0207AF1B43DF0000E52C79 /* AFHTTPRequestOperation.m in Sources */,
+				BCFB11691B493B7A002B0005 /* RepostCellFrame.m in Sources */,
 				BCECE9A41B47BEF70071FD81 /* MJRefreshAutoNormalFooter.m in Sources */,
 				BCECE99E1B47BEF70071FD81 /* MJRefreshAutoFooter.m in Sources */,
 				BCECE9B91B47E1BC0071FD81 /* BaseStatusCell.m in Sources */,
 				BCFDAA7C1B42B51F007F4833 /* DockItem.m in Sources */,
 				BC0207D31B43E6F400E52C79 /* HttpTool.m in Sources */,
+				BCFB114B1B492763002B0005 /* BaseModel.m in Sources */,
 				BCECE9A71B47BEF70071FD81 /* MJRefreshBackNormalFooter.m in Sources */,
+				BCD811FB1B4A998B008AB696 /* FriendshipTool.m in Sources */,
 				BCF0DB631B43CC50006BDB17 /* GroupCell.m in Sources */,
+				BCFB115D1B49383C002B0005 /* Comment.m in Sources */,
 				BCECE9AA1B47BEF70071FD81 /* MJRefreshNormalHeader.m in Sources */,
 				BCFB11421B4911D0002B0005 /* DetailHeader.m in Sources */,
 				BCECE9A51B47BEF70071FD81 /* MJRefreshAutoStateFooter.m in Sources */,
+				BCFB11511B4929E0002B0005 /* BaseWordCell.m in Sources */,
 				BC0207C01B43E03500E52C79 /* MBProgressHUD.m in Sources */,
 				BCE2A8FB1B4530B400F53E2A /* SDWebImageCompat.m in Sources */,
 				BCECE9A31B47BEF70071FD81 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -948,12 +1058,16 @@
 				BCE2A8FA1B4530B400F53E2A /* SDImageCache.m in Sources */,
 				BCFDAA7F1B42B53E007F4833 /* Dock.m in Sources */,
 				BCE2A8FC1B4530B400F53E2A /* SDWebImageDecoder.m in Sources */,
+				BCFB11661B493B5D002B0005 /* CommentCellFrame.m in Sources */,
+				BCD811FE1B4A9D66008AB696 /* FriendshipController.m in Sources */,
+				BCFB11481B4925E4002B0005 /* BaseCell.m in Sources */,
 				BC9B085E1B44C71400C22F82 /* StatusCell.m in Sources */,
 				BC0DED051B426F3500308096 /* NewfeatureController.m in Sources */,
 				BCECE9AD1B47BEF70071FD81 /* MJRefreshConst.m in Sources */,
 				BCECE9B01B47BEF70071FD81 /* UIView+MJExtension.m in Sources */,
 				BCE2A8FD1B4530B400F53E2A /* SDWebImageDownloader.m in Sources */,
 				BC0DED081B428B8100308096 /* UIView+Extension.m in Sources */,
+				BCFB11541B492BED002B0005 /* BaseTextCell.m in Sources */,
 				BC9C94F21B4635FB00847A5A /* ImageListView.m in Sources */,
 				BCFB113C1B48FD7A002B0005 /* StatusDetailCellFrame.m in Sources */,
 				BCECE9A21B47BEF70071FD81 /* MJRefreshHeader.m in Sources */,
@@ -974,6 +1088,7 @@
 				BC0207B51B43DF0000E52C79 /* AFURLRequestSerialization.m in Sources */,
 				BC0207B71B43DF0000E52C79 /* AFURLSessionManager.m in Sources */,
 				BCECE9A11B47BEF70071FD81 /* MJRefreshFooter.m in Sources */,
+				BCFB11601B493AC8002B0005 /* CommentCell.m in Sources */,
 				BCE2A9071B4530B400F53E2A /* UIView+WebCacheOperation.m in Sources */,
 				BCE2A9001B4530B400F53E2A /* SDWebImagePrefetcher.m in Sources */,
 				BC0207B61B43DF0000E52C79 /* AFURLResponseSerialization.m in Sources */,
@@ -997,7 +1112,10 @@
 				BC0207B21B43DF0000E52C79 /* AFNetworkReachabilityManager.m in Sources */,
 				BCECE9AB1B47BEF70071FD81 /* MJRefreshStateHeader.m in Sources */,
 				BC9B08641B44E5DA00C22F82 /* NSString+Extensions.m in Sources */,
+				BCFB114E1B4928CB002B0005 /* BaseText.m in Sources */,
+				BCFB11631B493AE4002B0005 /* RepostCell.m in Sources */,
 				BCFDAA901B42B9D1007F4833 /* MessageController.m in Sources */,
+				BCFB11571B492C33002B0005 /* BaseTextCellFrame.m in Sources */,
 				BC9C94F51B4672C200847A5A /* ImageItemView.m in Sources */,
 				BC9C94F81B4679A300847A5A /* StatusDock.m in Sources */,
 			);
@@ -1108,6 +1226,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1119,6 +1238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

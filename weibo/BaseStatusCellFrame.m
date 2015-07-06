@@ -44,7 +44,7 @@
     // 3.时间
     CGFloat timeX = screenNameX;
     CGFloat timeY = CGRectGetMaxY(_screenNameFrame) + kCellBorderWidth;
-    CGSize timeSize = [status.createdat sizeWithFont:kTimeFont];
+    CGSize timeSize = [status.createdAt sizeWithFont:kTimeFont];
     _timeFrame = (CGRect){timeX,timeY,timeSize};
     
     // 4.来源

@@ -12,7 +12,7 @@
 
 -(id)initWithDict:(NSDictionary *)dict
 {
-    if (self = [super init]) {
+    if (self = [super initWithDict:dict]) {
         self.screenName = dict[@"screen_name"];
         self.profileImageUrl = dict[@"profile_image_url"];
         self.verified = [dict[@"verified"] boolValue];

@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Status;
+@class Status,DetailHeader;
+
+typedef enum {
+    kDetailHeaderBtnTypeRepost, //转发
+    kDetailHeaderBtnTypeComment, //评论
+} DetailHeaderBtnType;
+
+@protocol DetailHeaderDelgate <NSObject>
+
+@optional
+-(void)detailHeader:(DetailHeader *)header btnClick:(DetailHeaderBtnType)index;
+
+@end
 
 @interface DetailHeader : UIView
 
@@ -19,4 +31,8 @@
 + (id)header;
 
 @property (nonatomic,strong) Status *status;
+@property (nonatomic,weak) id<DetailHeaderDelgate> delegate;
+
+@property (nonatomic,assign,readonly) DetailHeaderBtnType currentBtnType;
+
 @end

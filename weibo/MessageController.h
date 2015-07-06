@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FriendshipController.h"
 
-@interface MessageController : UITableViewController
+@interface MessageController : FriendshipController
 
 @end
